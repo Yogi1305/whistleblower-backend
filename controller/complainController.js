@@ -7,7 +7,7 @@ export const createcomplain = async (req, res) => {
     console.log("HIT")
     try {
         const { department,  title, description, category } = req.body
-
+     
         if (!department  || !title || !description )
             return res.status(400).json({ message: "All field are required", success: false })
         const urls = [];
